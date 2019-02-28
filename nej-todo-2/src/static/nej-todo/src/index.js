@@ -25,10 +25,12 @@ NEJ.define([
     let _html = _jst._$get('todo-list-template', {
       todos: this.data,
       condition: this.condition
-    });
+    })
 
-    if (_html) {
-      $('.todo-list')[0].innerHTML = _ele._$html2node(_html).innerText
+    let _node = _ele._$html2node(_html)
+
+    if (_html && _node) {
+      $('.todo-list')[0].innerHTML = _node.innerText
     } else {
       $('.todo-list')[0].innerHTML = ''
     }

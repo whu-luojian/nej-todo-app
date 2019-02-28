@@ -11,7 +11,8 @@
 1. 启动
 ```
 cd nej-todo-2
-npm run dev
+npm install
+npm run start
 ```
 2. 访问
 http://localhost:3000/nej-todo/src/index.html

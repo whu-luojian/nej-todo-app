@@ -10,7 +10,7 @@
 使用NEJ开发的Todo应用，后台为 Koa2 + MongoDB
 1. 启动
 ```
-cd nej-todo-2/src
+cd nej-todo-2
 npm run dev
 ```
 2. 访问

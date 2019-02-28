@@ -1,0 +1,76 @@
+li .todo-item-toggle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  margin: auto 0;
+  text-align: center;
+  border: none;
+  background: none;
+  opacity: 0;
+}
+
+li span {
+  font-size: 24px;
+  word-break: break-all;
+  padding: 15px 15px 15px 60px;
+  display: block;
+  line-height: 1.2;
+  transition: color 0.4s;
+}
+
+.todo-item-toggle + span {
+  background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23ededed%22%20stroke-width%3D%223%22/%3E%3C/svg%3E);
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.todo-item-toggle:checked + span {
+  background-image: url(data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%22-10%20-18%20100%20135%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2250%22%20fill%3D%22none%22%20stroke%3D%22%23bddad5%22%20stroke-width%3D%223%22/%3E%3Cpath%20fill%3D%22%235dc2af%22%20d%3D%22M72%2025L42%2071%2027%2056l-4%204%2020%2020%2034-52z%22/%3E%3C/svg%3E);
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+
+.todo-item:hover .todo-item-remove {
+  display: inline;
+  color: #af5b5e;
+}
+
+.todo-item-remove {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  font-weight: bold;
+  background: none;
+  cursor: pointer;
+}
+
+.todo-item-edit {
+  display: none;
+  position: relative; 
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.4em;
+  border: 0;
+  padding: 6px;
+  border: 1px solid #999;
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+li.editing .todo-item {
+  display: none
+}
+
+li.editing .todo-item-edit {
+  display: block;
+  padding: 12px 16px;
+  margin: 0 0 0 43px;
+  width: calc(100% - 43px);
+  box-sizing: border-box;
+}

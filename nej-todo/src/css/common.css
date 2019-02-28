@@ -1,0 +1,57 @@
+/*清除及设置标签默认样式*/
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4, h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  font-size: 14px;
+  text-decoration: none;
+  border: none;
+  color: #4d4d4d;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*定义滚动条高宽及背景，高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: transparent;
+}
+
+/*定义滚动条轨道：内阴影 + 圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
+  border-radius: 10px;
+  background-color: transparent
+}
+
+/*定义滑块：内阴影 + 圆角*/
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: rgb(64, 158, 255)
+}
+
+/*清除某些表单的默认外观*/
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+  -webkit-appearance: none
+}
+input:focus {
+  outline: 0;
+}
+
+/* placeholder默认颜色 */
+input::-webkit-input-placeholder {
+  color: #ddd
+}
+
+textarea {
+  -webkit-appearance: none
+}  
+
+html, body {
+  height: 100%;
+  width: 100%
+}

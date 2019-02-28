@@ -1,0 +1,14 @@
+<textarea name="jst" id="todo-list-template">
+  {list todos as x}
+    {if condition == "All" || (condition == "Completed" && x.completed) || (condition == "Active" && !x.completed)}
+      <li {if x.completed} class="completed" {/if} >
+        <div class="todo-item">
+          <input class="todo-item-toggle" type="checkbox" data-id=${x.id} {if x.completed} checked {/if} />
+          <span id="todo-item-label" class="todo-item-label">${x.value}</span>
+          <button class="todo-item-remove" data-id=${x.id}>X</button>
+        </div>
+        <input class="todo-item-edit" type="text" data-id=${x.id} value=${x.value} />
+      </li>
+    {/if}
+  {/list}
+</textarea>
